@@ -2,9 +2,9 @@ import mongoose from 'mongoose'
 
 const { Schema } = mongoose;
 const UserSchema = Schema({
+  nombre: String,
   correo: String,
   contrasena: { type: String, select: false },
-  nombre: String,
   apellido: String,
   telefono: Number,
   cargo: String,

@@ -62,8 +62,8 @@ export async function login(req, res){
 
       //Generación de TOKEN
       const token = jwt.sign({sub: userData._id}, process.env.API_KEY, { expiresIn:'7d' })
-      return res.status(200).json({nombre: userData.name, 
-                                    correo:userData.email, 
+      return res.status(200).json({ nombre: userData.nombre, 
+                                    correo:userData.correo, 
                                     apellido:userData.apellido, 
                                     telefono:userData.telefono, 
                                     cargo:userData.cargo, 
