@@ -17,7 +17,8 @@ export function startServer(){
     })
 
     app.use('/api/user', userRouter)
-    console.log(`ROUTES: /health - /api/user/login`)
+    console.info(`ROUTES: /health - /api/user/login`)
+    console.info(`API en funcionamiento`)
   })
 
 }

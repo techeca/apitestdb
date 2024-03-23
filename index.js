@@ -11,7 +11,7 @@ function uri3(){
   const hostDBMongoLocal = process.env.HOST_DB_LOCAL
   //const host = userMongo && passMongo ? hostDBMongo : hostDBMongoLocal
   //console.log(userMongo ? true : false)
-  const uri = userMongo && passMongo ? `mongodb+srv://${userMongo}:${passMongo}@${hostDBMongo}/${nameDB}?retryWrites=true&w=majority`
+  const uri = userMongo && passMongo ? `mongodb+srv://${userMongo}:${passMongo}@${hostDBMongo}/${nameDB}?retryWrites=true&w=majority&appName=Cluster0`
   : `mongodb://${String(hostDBMongoLocal)}/${nameDB}?retryWrites=true&w=majority`
   console.log(uri)
   return uri
