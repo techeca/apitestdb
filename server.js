@@ -2,7 +2,7 @@ import express from 'express'
 import { userRouter } from './routes/user.js'
 
 const app = express()
-const port = process.env.PORT_API
+const port = process.env.PORT
 
 export function startServer(){
   app.listen(port, () => {
