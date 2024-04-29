@@ -7,8 +7,9 @@ const UserSchema = Schema({
   contrasena: { type: String, select: false },
   apellido: String,
   telefono: Number,
-  cargo: String,
-  rut: String
+  idRol: Number,
+  rut: String,
+  clinicas: Array,
 },
   {
     collection: 'usuarios'

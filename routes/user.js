@@ -23,6 +23,8 @@ userRouter.options('/login', cors(optionsCORS))
 userRouter.post('/login', cors(optionsCORS), apiHandler(login));
 //userRouter.post('/new', cors(optionsCORS), apiHandler(newUser))
 
+//userRouter.get('')
+
 /*userRouter.get('/health', cors(optionsCORS), (req, res) => {
   res.json({backendStatus:'ok'})
 })*/

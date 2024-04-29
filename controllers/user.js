@@ -66,8 +66,9 @@ export async function login(req, res){
                                     correo:userData.correo, 
                                     apellido:userData.apellido, 
                                     telefono:userData.telefono, 
-                                    cargo:userData.cargo, 
-                                    rut:userData.rut, 
+                                    idRol:userData.idRol, 
+                                    rut:userData.rut,
+                                    clinicas:userData.clinicas,
                                     token})
     }else {
       return res.status(403).json({code:'403', message:'Not Found'})

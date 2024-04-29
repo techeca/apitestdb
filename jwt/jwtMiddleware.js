@@ -12,7 +12,7 @@ function jwtMiddleware(req, res) {
         path: [
             // public routes that don't require authentication
             '/api/user/login',
-            //'/api/user/register',
+            //jw'/api/user/register',
             '/api/user/health'
             //'/api/content/stats',
             //'/api/content/home'
