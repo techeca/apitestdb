@@ -3,6 +3,7 @@ import { userRouter } from './routes/user.js'
 
 const app = express()
 const port = process.env.PORT
+const API_URL = process.env.API_URL
 
 export function startServer(){
   app.listen(port, () => {
@@ -106,8 +107,15 @@ export function startServer(){
       }
     })
 
-  
-    console.info(`ROUTES: /health - /api/user/login`)
-    console.info(`API en funcionamiento`)
+    console.info('\x1b[31m%s\x1b[1m', 'API TEST');
+
+    console.info('\x1b[32m%s\x1b[0m', `API URL: ${API_URL}`);
+    console.info('\x1b[32m%s\x1b[0m', `API URL: ${port}`);
+    
+    console.info('\x1b[32m%s\x1b[0m', 'Endpoints:');
+    console.log('\x1b[33m%s\x1b[0m', 'POST /api/user/login');
+    console.log('\x1b[33m%s\x1b[0m', 'GET /api/roles');
+    console.log('\x1b[33m%s\x1b[0m', 'GET /api/servicios');
+    console.log('\x1b[33m%s\x1b[0m', 'GET /api/clinica?idClinica=id');
   })
 }
